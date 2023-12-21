@@ -7,7 +7,6 @@ module MagicFormulaTyre
 
 	export lateralForce
 	function lateralForce(α; F_z=2000, γ=0)
-
         # For more information on the Magic Formula Tyre model, please refer to [ref: https://doi.org/10.4271/870421]
         a_1 = defaultArgs.a1; a_2 = defaultArgs.a2; a_3 = defaultArgs.a3; a_4 = defaultArgs.a4; a_5 = defaultArgs.a5; a_6 = defaultArgs.a6
         a_7 = defaultArgs.a7; a_8 = defaultArgs.a8; a_9 = defaultArgs.a9; a_10 = defaultArgs.a10; a_11 = defaultArgs.a11; a_12 = defaultArgs.a12
