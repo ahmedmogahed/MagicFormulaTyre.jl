@@ -1,10 +1,15 @@
 module MagicFormulaTyre
 
+	include("./Argument.jl")
+	using .Argument
+
+    defaultArgs = default()
+
 	export lateralForce
 	function lateralForce(α; F_z=2000, γ=0)
         # For more information on the Magic Formula Tyre model, please refer to [ref: https://doi.org/10.4271/870421]
-        a_1 = -22.1; a_2 = 1011; a_3 = 1078; a_4 = 1.82; a_5 = 0.208; a_6 = 0.000
-        a_7 = -0.354; a_8 = 0.707; a_9 = 0.028; a_10 = 0.000; a_11 = 14.8; a_12 = 0.022
+        a_1 = defaultArgs.a1; a_2 = defaultArgs.a2; a_3 = defaultArgs.a3; a_4 = defaultArgs.a4; a_5 = defaultArgs.a5; a_6 = defaultArgs.a6
+        a_7 = defaultArgs.a7; a_8 = defaultArgs.a8; a_9 = defaultArgs.a9; a_10 = defaultArgs.a10; a_11 = defaultArgs.a11; a_12 = defaultArgs.a12
 
         # IMPORTANT conversions (forces in `kN` and angles in `deg`)
         α_d = rad2deg(α); γ_d = rad2deg(γ); F_zk = F_z / 1e3
